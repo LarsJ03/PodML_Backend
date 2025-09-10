@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="app.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2979"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="configurations" custom_title="0" dock_id="4" table="4,14:mainconfigurations"/><table title="configurations" custom_title="0" dock_id="3" table="4,14:mainconfigurations"/><table title="configurations" custom_title="0" dock_id="5" table="4,14:mainconfigurations"/><dock_state state="000000ff00000000fd0000000100000002000003740000033efc0100000002fc00000000000003740000000000fffffffa000000000100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000000000000000fc00000000000003740000010100fffffffa000000020100000003fb000000160064006f0063006b00420072006f00770073006500330100000000ffffffff0000010100fffffffb000000160064006f0063006b00420072006f00770073006500340100000000ffffffff0000010100fffffffb000000160064006f0063006b00420072006f00770073006500350100000000ffffffff0000010100ffffff000002880000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="configurations" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="21"/><column index="2" value="79"/><column index="3" value="44"/><column index="4" value="83"/><column index="5" value="71"/><column index="6" value="70"/><column index="7" value="85"/><column index="8" value="130"/><column index="9" value="79"/><column index="10" value="83"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="PodML-setup.sql">INSERT INTO configurations (
+    id,
+    owner_sub,
+    name,
+    dataset_uri,
+    x_column,
+    y_column,
+    model_type,
+    hyperparams_json
+) VALUES (
+    '11111111-2222-3333-4444-555555555555',       -- dummy UUID
+    'f3e4b832-7001-7003-5416-5243781adf73',       -- Cognito sub
+    'Dummy Linear Model',                         -- config name
+    '/datasets/sample.csv',                       -- dataset path
+    'feature_x',                                  -- X column
+    'target_y',                                   -- Y column
+    'linear_regression',                          -- model type
+    '{&quot;fit_intercept&quot;: true, &quot;normalize&quot;: false}' -- example hyperparams
+);
+
+
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

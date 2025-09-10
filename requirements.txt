@@ -1,0 +1,12 @@
+fastapi
+boto3
+pydantic
+uvicorn
+pydantic_settings
+email-validator==2.2.0
+SQLAlchemy==2.0.35
+python-dotenv==1.0.1
+python-jose[cryptography]==3.3.0
+httpx
+python-multipart
+kubernetes
